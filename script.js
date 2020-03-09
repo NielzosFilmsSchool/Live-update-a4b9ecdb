@@ -1,7 +1,11 @@
 const pi = 3.14;
 
-var d = new Date();
-document.querySelectorAll("p")[0].innerHTML = d;
+var intervalID = window.setInterval(printTime, 1000);
+
+function printTime(){
+    var d = new Date();
+    document.querySelectorAll("p")[0].innerHTML = d;
+}
 
 function bereken() {
     let input = document.querySelector("input").value;
